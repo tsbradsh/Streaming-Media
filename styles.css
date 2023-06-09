@@ -1,0 +1,361 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 375px;
+    margin: 0 auto;
+    background-color: #020659;
+}
+a:link {
+    text-decoration: none;
+    color: #ffffff;
+}
+a:visited {
+    text-decoration: none;
+    color: #ffffff;
+}
+li:hover{
+    background-color: #590242;
+}
+header {
+    background: linear-gradient(to right, #2104D9, #000000);
+    color: #ffffff;
+    margin-top: 56px;
+    padding: 0 35px 10px 35px;
+}
+.muzak {
+    font-variant: small-caps;
+    color: #ffffff;
+    z-index: 1;
+    position:absolute;
+    left: 43%;
+    top:15px;
+    font-size:1.25em;
+    font-weight: bold;
+}
+h1 {
+    padding-top: 5px;
+}
+nav {
+    background-color:#030A8C;
+    position: absolute;
+    top: 0;
+    height: 60px;
+    width: 375px;
+}
+ul li {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+li:first-child {
+    text-transform: none;
+    font-variant: small-caps;
+    font-weight: bold;
+    font-size: 1.25em;
+}
+
+main {
+    background-color: #ffffff;
+}
+
+nav h2{
+    display: none;
+}
+h1 {
+    font-size: 1.25em;
+    line-height: 2em;
+}
+h2 {
+    padding-left:20px;
+}
+h1, h2, h3 {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+h2, h3 {
+    font-size: 1em;
+    color: #590242;
+    line-height: 1em;
+}
+h3 {
+    margin: 7px;
+}
+p, dl, dd {
+    font-size: 1em;
+}
+dl {
+    margin: 5px 0;
+}
+dt {
+    font-style:italic;
+    color: #590242;
+}
+dd {
+    color: #590242;
+}
+footer {
+    background-color: #ffffff;
+}
+footer p {
+    font-size: .75em;
+    text-align: center;
+    color: #590242;
+}
+#trending {
+    padding-top: 20px;
+}
+#trending, #playlists, #curated {
+    background-color: #ffffff;
+}
+#playlistbg {
+    background-color: #2699FB;
+}
+#playlistbg section {
+    background-color: #0D8DFB;
+}
+#playlistbg h3, #curatedbg h3 {
+    color: #ffffff;
+}
+#curatedbg {
+    background-color: #030A8C;
+}
+#curatedbg section {
+    background-color: #020873;
+}
+section h2 {
+    background-color: #ffffff;
+}
+section p {
+    color: #ffffff;
+}
+#curatedbg img {
+    position: relative;
+    z-index: 1;
+}
+#playlistbg img {
+    position: relative;
+    z-index: 1;
+}
+ul {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+label {
+    cursor: pointer;
+    display: inline-block;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+}
+label span {
+    background-color: #ffffff;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background-color .2s ease-out;
+    width: 18px;
+}
+label span:before, label span:after {
+    background: #ffffff;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+label span:before {
+    top: 5px;
+}
+label span:after {
+    top: -5px;
+}
+input {
+    display: none;
+}
+input:checked ~ ul {
+    max-height: 500px;
+    width: 335px;
+    background-color: #030A8C;
+    position: absolute;
+    top: 40px;
+}
+input:checked ~ label span {
+    background: transparent;
+}
+input:checked ~ label span:before {
+    transform: rotate(-45deg);
+}
+input:checked ~ label span:after {
+    transform: rotate(45deg);
+}
+input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps) span:after {
+    top: 0;
+}
+.scroll {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    overflow-x: auto;
+    overflow-y: hidden;
+    z-index: 1;
+}
+.scroll section {
+    margin:10px;
+    position: relative;
+}
+.scroll div {
+    position: absolute;
+    top:251px;
+    background-color:rgba(255,255,255,.75);
+    padding: 5px;
+    height: 50px;
+    width: 350px;
+}
+dl {
+    display: flex;
+}
+dt {
+    padding-right: 5px;
+}
+audio {
+    position: absolute;
+    bottom: 150px;
+    left: 5px;
+}
+.more {
+    text-decoration: none;
+    background-color: #590242;
+    color: #ffffff;
+    border-radius: 5px;
+    padding: 10px;
+    width: 150px;
+    display: block;
+    text-align: center;
+    margin: 10px 0 30px 32px;
+}
+.more:hover {
+    background-color: #020659;
+}
+audio::-webkit-media-controls-mute-button {
+    background-color: #ffffff;
+    border-radius: 50%;
+}
+audio::-webkit-media-controls-play-button {
+    background-color: #ffffff;
+    border-radius: 50%;
+}
+audio::-webkit-media-controls-enclosure {
+    background-color:rgba(255,255,255,.5);
+}
+#trending ::-webkit-scrollbar {
+    width: 15px;
+}
+#trending ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 15px #590242;
+}
+#trending ::-webkit-scrollbar-thumb {
+    background:#590242;
+    border-radius: 5px;
+}
+#trending ::-webkit-scrollbar-thumb:hover {
+    background: #020659;
+}
+#playlists ::-webkit-scrollbar, #curated ::-webkit-scrollbar {
+    width: 15px;
+}
+#playlists ::-webkit-scrollbar-track, #curated ::-webkit-scrollbar-track  {
+    box-shadow: inset 0 0 15px #020659;
+}
+#playlists ::-webkit-scrollbar-thumb, #curated ::-webkit-scrollbar-thumb {
+    background:#020659;
+    border-radius: 5px;
+}
+#playlists ::-webkit-scrollbar-thumb:hover, #curated ::-webkit-scrollbar-thumb:hover {
+    background: #ffffff;
+}
+
+@media screen and (min-width:834px) {
+    ul {
+        overflow: visible;
+        position: absolute;
+        top: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+    label span, input {
+        display: none;
+    }
+    body {
+        width: 834px;
+    }
+    nav {
+        width: 834px;
+    }
+    .muzak {
+        display: none;
+    }
+    #trending {
+        height: 900px;
+        padding-top: 0px;
+    }
+    #trending h2 {
+        background-color: #ffffff;
+        padding-top: 50px;
+        margin-top: 0;
+
+    }
+    #curatedbg, #playlistbg {
+        display: block;
+        overflow-y: visible;
+        height: 500px;
+    }
+    #curatedbg ~ h3 {
+        position: relative;
+        left: 500px;
+    }
+    #playlistbg section, #curatedbg section {
+        display: flex;
+        align-items: center;
+    }
+    .textcontainer {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    #playlists  {
+        position: absolute;
+        top: 575px;
+        width: 417px;
+        margin-top: 100px;
+    }
+    #curated {
+        position: absolute;
+        top: 575px;
+        left: 50%;
+        width: 417px;
+        margin-top: 100px;
+    }
+    #curatedbutton {
+        position: relative;
+        left: 625px;
+    }
+    #trendingbutton {
+        position: absolute;
+        bottom: 520px;
+        left: 620px;
+        z-index: 1;
+    }
+    #playlistbutton {
+        position: absolute;
+        z-index: 1;
+        top: 542px;
+        right: 430px;
+    }
+    footer {
+        position: absolute;
+        top: 1217px;
+        width: 836px;
+    }        
+}
